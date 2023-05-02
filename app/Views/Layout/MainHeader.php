@@ -2,13 +2,13 @@
 
 $navItems = [
     [
+        'label' => 'Profile',
+        'link' => '/profile'
+    ],
+    [
         'label' => 'Siswa',
         'link' => '/student'
     ],
-    // [
-    //     'label' => 'Analitik',
-    //     'link' => '/analytic'
-    // ],
     [
         'label' => 'Prestasi',
         'link' => '/achievement'
