@@ -15,13 +15,15 @@ class Student extends Seeder
 
         for ($i = 0; $i < 200; $i++) {
             $gender = $faker->randomElement(array('L', 'P'));
+            $nis = $faker->numberBetween(10000, 99999);
             $studentModel->insert([
-                'nis' => $faker->numberBetween(1000, 9999),
+                'nis' => $nis,
                 'name' => $faker->name($gender == 'L' ? 'male' : 'female'),
                 'gender' => $gender,
                 'class' => $faker->randomElement(array('X A', 'X B', 'XI A', 'XI B', 'XII A', 'XII B')),
                 'address' => $faker->address(),
                 'phone' => $faker->phoneNumber(),
+                'password' => createPassword($nis),
             ]);
         }
     }

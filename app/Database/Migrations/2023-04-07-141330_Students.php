@@ -37,6 +37,9 @@ class Student extends Migration
                 'type' => 'varchar',
                 'constraint' => 50
             ],
+            'password' => [
+                'type' => 'text'
+            ],
             'created_at datetime not null default current_timestamp',
             'updated_at datetime not null default current_timestamp on update current_timestamp',
             'deleted_at' => [
